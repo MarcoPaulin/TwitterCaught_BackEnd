@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\BackEnd.csproj": {}
+    "C:\\Users\\lopez\\Desktop\\ynov\\projetdev\\TwitterCaught_BackEnd\\BackEnd\\BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\BackEnd.csproj": {
+    "C:\\Users\\lopez\\Desktop\\ynov\\projetdev\\TwitterCaught_BackEnd\\BackEnd\\BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\lopez\\Desktop\\ynov\\projetdev\\TwitterCaught_BackEnd\\BackEnd\\BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\BackEnd.csproj",
-        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\lopez\\Desktop\\ynov\\projetdev\\TwitterCaught_BackEnd\\BackEnd\\BackEnd.csproj",
+        "packagesPath": "C:\\Users\\lopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lopez\\Desktop\\ynov\\projetdev\\TwitterCaught_BackEnd\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,6 +82,14 @@
               "target": "Package",
               "version": "[6.0.13, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.33, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -119,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

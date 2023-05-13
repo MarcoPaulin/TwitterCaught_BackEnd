@@ -1,7 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Configuration;
+using Microsoft.Extensions.Configuration;
+
+
 namespace BackEnd.Controllers
 {
     public class Startup
@@ -10,6 +15,8 @@ namespace BackEnd.Controllers
         {
             services.AddCors();
             services.AddControllers();
+        /*    services.AddDbContext<DbContext>(options =>
+             options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));*/
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
