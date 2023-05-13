@@ -32,6 +32,7 @@ namespace BackEnd.Controllers
                 string json = System.IO.File.ReadAllText("tweets.json");
                 List<string> insult_total = new List<string>();
                 string[] tweets = JsonSerializer.Deserialize<string[]>(json);
+                double moyenne_general;
                 if (tweets.Length > 0 || tweets == null)
                 {
 
@@ -50,9 +51,9 @@ namespace BackEnd.Controllers
 
                         }
                     }
-                    moyenne = moyenne / tweets.Length;
-                    Console.WriteLine("moyenne : " + moyenne);
-                    return Ok(new { toxicityMoyenne = moyenne, tweets = tweets, insult_moyenne = insult_total }) ;
+                    moyenne_general = (double)moyenne / (double)tweets.Length;
+                    Console.WriteLine("moyenne : " + moyenne_general);
+                    return Ok(new { toxicityMoyenne = moyenne_general, tweets = tweets, insult_moyenne = insult_total }) ;
 
                 }
                 else

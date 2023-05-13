@@ -556,13 +556,18 @@
         int moyenne;
         public ParsingTweet(string tweet, int moyenne)
         {
-            tweet = tweet.ToUpper();
+           
             this.moyenne = moyenne;
-            foreach (string word in badWords)
+            string[] mots = tweet.Split(' ');
+
+            foreach (string mot in mots)
             {
-                if (tweet.Contains(" " + word.ToUpper() + " "))
+                foreach (string word in badWords)
                 {
-                    badWordsInTweet.Add(word);
+                    if (mot.ToUpper().Equals(word.ToUpper()))
+                    {
+                        badWordsInTweet.Add(word);
+                    }
                 }
             }
 
@@ -575,13 +580,7 @@
 
         public int ToxicityTweet()
         {
-            if ((int)(badWordsInTweet.Count) == 0) {
-                return (0);
-            } else
-            {
-
-                return (moyenne +(int)badWordsInTweet.Count) ;
-            }
+            return ((int)badWordsInTweet.Count);
         }
     }
 }
