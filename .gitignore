@@ -1,3 +1,4 @@
 node_modules/
 bin/
 .vs/
+Backend/obj/Debug/
