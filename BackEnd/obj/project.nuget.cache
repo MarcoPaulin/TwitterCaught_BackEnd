@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vXSS2FA5wJhnLRCAYG5qssdu8THQ4rfthbFS0kTP2Q/TFpj1onjkdmGwm6f8x5GH0MZJbTeRGC2g6XOvAbSFag==",
+  "dgSpecHash": "ThMJpJr+HB3QpTNFM0Q8onko+XA6E/z1sYKgt1b+jfcaFCjDxXRd8ZeQ4H/mcDeqE9WMz5ZSkiGhET7gk2j8Xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\BackEnd.csproj",
+  "projectFilePath": "C:\\Users\\marco\\Documents\\TwitterCaught_BackEnd\\BackEnd\\BackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marco\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -210,12 +210,6 @@
     "C:\\Users\\marco\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\marco\\Documents\\Ynov\\TwitterCaught\\Backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

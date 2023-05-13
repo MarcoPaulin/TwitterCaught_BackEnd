@@ -549,17 +549,20 @@
 "x rated",
 "xrated",
 "xxx",
- "merci"};
+"merci",
+"civilisation",
+        "Starlink"};
         List<String> badWordsInTweet = new List<string>();
-
-        public ParsingTweet(string tweet)
+        int moyenne;
+        public ParsingTweet(string tweet, int moyenne)
         {
             tweet = tweet.ToUpper();
+            this.moyenne = moyenne;
             foreach (string word in badWords)
             {
-                if (tweet.Contains(" " + word + " "))
+                if (tweet.Contains(" " + word.ToUpper() + " "))
                 {
-                    badWordsInTweet.Add(word.ToUpper());
+                    badWordsInTweet.Add(word);
                 }
             }
 
@@ -572,7 +575,13 @@
 
         public int ToxicityTweet()
         {
-            return (int)badWordsInTweet.Count;
+            if ((int)(badWordsInTweet.Count) == 0) {
+                return (0);
+            } else
+            {
+
+                return (moyenne +(int)badWordsInTweet.Count) ;
+            }
         }
     }
 }
