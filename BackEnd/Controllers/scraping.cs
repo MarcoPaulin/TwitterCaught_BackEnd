@@ -38,7 +38,7 @@ namespace BackEnd.Controllers
                     int moyenne = 0;
                     foreach (string str in tweets)
                     {
-                        ParsingTweet test = new ParsingTweet(str);
+                        ParsingTweet test = new ParsingTweet(str, moyenne);
                         List<string> insults = test.getInsulteInTweet();
                         int toxicity = test.ToxicityTweet();
                         moyenne += toxicity;
