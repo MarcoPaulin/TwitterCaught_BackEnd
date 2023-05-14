@@ -50,10 +50,9 @@ namespace BackEnd.Controllers
 
                 }
                 finally { mySqlConnection.Close(); }
-                Console.WriteLine("end");
-                return Ok(new { Message = "ok" });
+                return Ok(new { Message = "ok", token = Userlogin.token });
             }
-            catch { return BadRequest(); }
+            catch { return BadRequest(new { Message = "une erreur est survenue" }); }
         }
         private string CreateJwt(Userlogin user)
         {
