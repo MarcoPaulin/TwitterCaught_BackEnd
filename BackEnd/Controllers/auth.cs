@@ -41,7 +41,7 @@ namespace BackEnd.Controllers
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
-
+                    return (BadRequest(new { Message = "Erreur dans le scrapping" }));
                 }
                 finally { mySqlConnection.Close(); }
                 Console.WriteLine("end");
