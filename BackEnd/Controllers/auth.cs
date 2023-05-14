@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using System.Text.Json;
 
 namespace BackEnd.Controllers
 {
@@ -20,6 +21,17 @@ namespace BackEnd.Controllers
                 Console.WriteLine("ici");
                 try
                 {
+
+                    Scrapeur scrapeur = new Scrapeur(userDto.twitterArobase);
+                    scrapeur.getTweets(1);
+
+                    string json = System.IO.File.ReadAllText("tweets.json");
+                    List<string> insult_total = new List<string>();
+                    string[] tweets = JsonSerializer.Deserialize<string[]>(json);
+                    if (tweets == null || tweets.Length == 0)
+                    {
+                        return BadRequest(new { Message = "L'utilisateur n'existe pas ou votre compte est en privé" });
+                    }
                     mySqlConnection.Open();
                     Console.WriteLine("ok");
                     MySqlCommand mySqlCommandSecond = new MySqlCommand("INSERT INTO users (email, password, username, twitterusername) VALUES ('"+ userDto.email + "', '"+ userDto.password + "' , '"+ userDto.username + "', '"+ userDto.twitterArobase + "');", mySqlConnection);

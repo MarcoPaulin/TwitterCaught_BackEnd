@@ -33,7 +33,7 @@ namespace BackEnd.Controllers
                 List<string> insult_total = new List<string>();
                 string[] tweets = JsonSerializer.Deserialize<string[]>(json);
                 double moyenne_general;
-                if (tweets.Length > 0 || tweets == null)
+                if (tweets.Length > 0 && tweets != null)
                 {
 
                     int moyenne = 0;
