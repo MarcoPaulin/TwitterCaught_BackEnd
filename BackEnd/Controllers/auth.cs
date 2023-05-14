@@ -14,7 +14,7 @@ namespace BackEnd.Controllers
         [HttpPost]
         public IActionResult CreateUser([FromBody] UserDto userDto)
         {
-            System.Console.WriteLine($"username: {userDto.username}, pass: {userDto.password}, passcon: {userDto.passwordConfirmation}, arobase: {userDto.twitterArobase}, email: {userDto.email}");
+            System.Console.WriteLine($"username: {userDto.username}, pass: {userDto.password}, arobase: {userDto.twitterArobase}, email: {userDto.email}");
             try {
                 string mysqlCon = "server=127.0.0.1; user=root ; database=twittercaught; password=";
                 MySqlConnection mySqlConnection = new MySqlConnection(mysqlCon);
@@ -55,7 +55,6 @@ namespace BackEnd.Controllers
     {
         public string? username { get; set; }
         public string? password { get; set; }
-        public string? passwordConfirmation { get; set; }
         public string? twitterArobase { get; set; }
         public string? email { get; set; }
     }
